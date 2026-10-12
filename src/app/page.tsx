@@ -147,36 +147,9 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* Itinerario */}
-        <section className="mx-auto max-w-3xl px-6 py-20">
-          <Reveal>
-            <SectionTitle>Programa</SectionTitle>
-          </Reveal>
-          <ol className="relative space-y-6 border-l-4 border-dashed border-circus-yellow pl-8">
-            {event.itinerary.map((item) => (
-              <li key={item.time}>
-                <Reveal className="relative">
-                  <span className="absolute top-1/2 -left-[3.15rem] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-4 border-white bg-circus-red text-xl shadow">
-                    {item.icon}
-                  </span>
-                  <div className="rounded-2xl bg-white p-4 shadow-md">
-                    <p className="font-display text-circus-blue">{item.time}</p>
-                    <p className="text-lg text-slate-700">{item.label}</p>
-                  </div>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        {/* Vestimenta y regalos */}
+        {/* Regalos */}
         <section className="bg-circus-red px-6 py-20">
-          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-            <Reveal>
-              <InfoCard icon="🎭" title={event.dressCode.title}>
-                {event.dressCode.description}
-              </InfoCard>
-            </Reveal>
+          <div className="mx-auto max-w-xl">
             <Reveal>
               <InfoCard icon="🎁" title={event.gifts.title}>
                 {event.gifts.description}

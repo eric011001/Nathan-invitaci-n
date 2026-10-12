@@ -14,22 +14,10 @@ export const event = {
     lat: 28.389733,
     lng: -106.967206,
   },
-  dressCode: {
-    title: "Código de vestimenta",
-    description:
-      "¡Ven de colores! Nariz roja, pelucas, tirantes y zapatos grandes son más que bienvenidos.",
-  },
-  itinerary: [
-    { time: "4:00 PM", label: "Recepción y palomitas", icon: "🍿" },
-    { time: "4:45 PM", label: "Show del payaso Chispitas", icon: "🤡" },
-    { time: "6:00 PM", label: "Piñata y juegos", icon: "🎯" },
-    { time: "7:00 PM", label: "Pastel y mañanitas", icon: "🎂" },
-    { time: "7:30 PM", label: "Dulces, baile y bolsitas de regalo", icon: "🎁" },
-  ],
   gifts: {
     title: "Mesa de regalos",
     description:
-      "Tu presencia es el mejor regalo. Si deseas obsequiar algo, a Nathan le encantan los perritos, plim plim y cositas que hagan ruido",
+      "Tu presencia es el mejor regalo. Si deseas obsequiar algo, a Nathan le encantan los perritos, plim plim y cositas que hagan ruido y luces",
   },
   rsvp: {
     deadline: "Confirma antes del 14 de noviembre",
