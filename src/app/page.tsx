@@ -158,6 +158,20 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Fotos */}
+        <section className="bg-circus-blue px-6 py-20 text-center text-white">
+          <Reveal className="mx-auto max-w-2xl">
+            <span className="text-6xl" aria-hidden>
+              📸
+            </span>
+            <h2 className="font-display mt-4 mb-6 text-4xl tracking-wide text-circus-yellow sm:text-5xl">
+              {event.photos.title}
+            </h2>
+            <p className="text-xl">{event.photos.description}</p>
+            <p className="ticket mt-8 p-6 text-lg text-slate-700">{event.photos.note}</p>
+          </Reveal>
+        </section>
+
         {/* RSVP */}
         <section className="stripes-bg px-6 py-20 text-center">
           <Reveal className="mx-auto max-w-xl">

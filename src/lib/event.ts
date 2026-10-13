@@ -19,6 +19,12 @@ export const event = {
     description:
       "Tu presencia es el mejor regalo. Si deseas obsequiar algo, a Nathan le encantan los perritos, plim plim y cositas que hagan ruido y luces",
   },
+  photos: {
+    title: "¡Prepárate para tomar muchas fotos!",
+    description:
+      "Sabemos que Nathan aún es muy pequeño para recordar este día, pero con tu ayuda podremos mantener cada momento congelado en el tiempo.",
+    note: "Después de la función te compartiremos un link para que nos envíes tus fotos y videos, y así revivir juntos la magia del circo.",
+  },
   rsvp: {
     deadline: "Confirma antes del 14 de noviembre",
     whatsapp: "526251190537",
