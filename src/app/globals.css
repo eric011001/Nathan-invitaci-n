@@ -200,7 +200,65 @@ html.locked body {
   box-shadow: 0 10px 0 var(--color-circus-red-dark);
 }
 
+/* ---------- Recuerdos ---------- */
+@keyframes stripes-move {
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-120%) rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.circus-drop {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-circus-red) 0 18px,
+    #fff 18px 36px
+  );
+  box-shadow: 0 8px 0 var(--color-circus-red-dark);
+}
+
+.circus-progress {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-circus-red) 0 10px,
+    #fff 10px 20px
+  );
+  background-size: 40px 100%;
+  animation: stripes-move 0.8s linear infinite;
+}
+
+.circus-awning {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-circus-red) 0 28px,
+    #fff 28px 56px
+  );
+}
+
+.circus-pop {
+  animation: pop-in 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.circus-toast {
+  animation: toast-in 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .circus-progress,
+  .circus-pop,
+  .circus-toast {
+    animation: none;
+  }
   .curtain,
   .valance,
   .tent-sign {

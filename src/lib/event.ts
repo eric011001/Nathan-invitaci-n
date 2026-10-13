@@ -30,7 +30,15 @@ export const event = {
     whatsapp: "526251190537",
     contactName: "Eric (papá de Nathan)",
   },
+  // Contacto para confirmar en la invitación de /kari
+  rsvpKari: {
+    deadline: "Confirma antes del 14 de noviembre",
+    whatsapp: "526255896925",
+    contactName: "Kari (Mamá de Nathan)",
+  },
 } as const;
+
+export type RsvpContact = { deadline: string; whatsapp: string; contactName: string };
 
 export const mapsEmbedUrl = `https://maps.google.com/maps?q=${event.venue.lat},${event.venue.lng}&z=16&output=embed`;
 export const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${event.venue.lat},${event.venue.lng}`;
