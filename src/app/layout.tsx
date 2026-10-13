@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Luckiest_Guy, Fredoka } from "next/font/google";
-import { event } from "@/lib/event";
+import { invitationMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const display = Luckiest_Guy({
@@ -14,25 +14,10 @@ const body = Fredoka({
   subsets: ["latin"],
 });
 
-const description = `¡${event.celebrant} cumple ${event.age} año! Te esperamos el ${event.dateLabel.toLowerCase()} bajo la gran carpa. 🎪`;
-
 export const metadata: Metadata = {
   // URL pública del sitio; sin ella los links de la imagen de previsualización no son absolutos.
   metadataBase: process.env.SITE_URL ? new URL(process.env.SITE_URL) : undefined,
-  title: `Invitación · ${event.title}`,
-  description,
-  openGraph: {
-    type: "website",
-    locale: "es_MX",
-    siteName: event.title,
-    title: `${event.title} 🎈`,
-    description,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${event.title} 🎈`,
-    description,
-  },
+  ...invitationMetadata("/"),
 };
 
 export const viewport: Viewport = {

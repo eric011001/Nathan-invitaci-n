@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     siteName: event.title,
     title: "¡Comparte tus recuerdos del circo! 📸",
     description,
+    url: "/recuerdos",
   },
   twitter: {
     card: "summary_large_image",
