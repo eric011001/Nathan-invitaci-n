@@ -2,6 +2,7 @@ import CircusTent from "@/components/CircusTent";
 import PlimPlim from "@/components/PlimPlim";
 import Countdown from "@/components/Countdown";
 import Reveal from "@/components/Reveal";
+import RsvpButton from "@/components/RsvpButton";
 import { event, mapsDirectionsUrl, mapsEmbedUrl, type RsvpContact } from "@/lib/event";
 
 const balloons = [
@@ -43,10 +44,6 @@ function InfoCard({ icon, title, children }: { icon: string; title: string; chil
 }
 
 export default function Landing({ rsvp }: { rsvp: RsvpContact }) {
-  const whatsappText = encodeURIComponent(
-    `¡Hola! Confirmo mi asistencia a la fiesta de ${event.celebrant} 🎪. Somos __ personas.`,
-  );
-
   return (
     <>
       <CircusTent />
@@ -178,14 +175,7 @@ export default function Landing({ rsvp }: { rsvp: RsvpContact }) {
             <SectionTitle>¿Vienes a la función?</SectionTitle>
             <p className="text-lg text-slate-700">{rsvp.deadline}</p>
             <p className="mb-8 text-slate-600">Contacto: {rsvp.contactName}</p>
-            <a
-              href={`https://wa.me/${rsvp.whatsapp}?text=${whatsappText}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-display inline-block rounded-full border-4 border-white bg-[#25d366] px-10 py-4 text-2xl tracking-wide text-white shadow-[0_6px_0_#128c7e] transition hover:scale-105"
-            >
-              ✅ Confirmar por WhatsApp
-            </a>
+            <RsvpButton rsvp={rsvp} />
           </Reveal>
         </section>
 

@@ -7,9 +7,23 @@ import MemoriesUploader from "@/components/MemoriesUploader";
 import { event } from "@/lib/event";
 import { isRemembersActive } from "@/lib/remembers";
 
+const description = `Sube las fotos y videos que tomaste en la fiesta de ${event.celebrant} para guardar estos momentos para siempre. 📸`;
+
 export const metadata: Metadata = {
-  title: `Recuerdos · Circo de ${event.celebrant}`,
-  description: `Comparte tus fotos y videos de la fiesta de ${event.celebrant}.`,
+  title: `Recuerdos · ${event.title}`,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    siteName: event.title,
+    title: "¡Comparte tus recuerdos del circo! 📸",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "¡Comparte tus recuerdos del circo! 📸",
+    description,
+  },
 };
 
 // Se evalúa en cada visita para que REMEMBERS_ACTIVE no quede fijo desde el build.
